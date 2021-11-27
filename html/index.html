@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Demo Build App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+
+<style>
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lato", sans-serif
+  }
+
+  .w3-bar,
+  h1,
+  button {
+    font-family: "Montserrat", sans-serif
+  }
+
+  .fa-anchor,
+  .fa-coffee {
+    font-size: 200px
+  }
+</style>
+
+<body>
+
+  <!-- Header -->
+  <header class="w3-container w3-red w3-center" style="padding:64px 16px">
+    <i class="fab fa-redhat fa-5x "></i>
+    <h1 class="w3-margin w3-jumbo">App Studio Demo Build</h1>
+    <p class="w3-xlarge">Use App Studio Build Pipelines to Build your Container</p>
+    <p class="w3-xlarge">Be Happy 
+    </p>
+
+    <p class="w3-xlarge">
+      This application can be built using the App Studio default Build Pipelines 
+    </p>
+
+    <a href="https://github.com/redhat-appstudio/infra-deployments.git" target="_blank">
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
+        Learn more about App Studio
+      </button>
+    </a>  
+  </header>
+
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content"> 
+        <h1 id="summary">Try <menu type="context"></menu> </h1> 
+        <ol class="w3-xlarge">
+          <li> Bootstrap your cluster 
+            <pre> hack/bootstrap.sh </pre> 
+          </li>
+          <li> Create a branch (optional)
+            <pre> git checkout -b demo </pre> 
+          </li>
+          <li> Install Pipelines 
+            <pre>./components/build/hack/install-pipelines.sh</pre>
+          </li>
+          <li> Test Pipelines 
+            <pre>./components/build/hack/test-known-build.sh </pre>
+          </li>
+          <li> Run your own container build
+            <pre> ./components/build/hack/test-known-build.sh URL</pre>
+            <pre>./components/build/hack/build.sh  https://github.com/jduimovich/single-container-app</pre>
+            
+          </li>
+        </ol> 
+
+        <p class="w3-xlarge"></p>
+        <a href="https://github.com/jduimovich/single-container-app" target="_blank">
+          <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
+            Check out the completed code here !
+          </button>
+        </a>
+        </p>
+      </div>  
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+    
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+
+</body>
+
+</html>
