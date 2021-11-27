@@ -1,6 +1,6 @@
 # Use the official Node 8 image.
 # https://hub.docker.com/_/node 
-FROM openshift/local-node
+FROM image-registry.openshift-image-registry.svc:5000/livedemo/single-container-app:86dcdaa
 
 # Create and change to the app directory.
 WORKDIR /usr/src/app
