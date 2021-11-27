@@ -1,0 +1,7 @@
+apiVersion: "v1"
+kind: "ImageStream"
+metadata:
+  name: "local-node"
+spec:
+  dockerImageRepository: "docker.io/node"
+ 
