@@ -1,14 +1,18 @@
 # Use the official Node 8 image.
 # https://hub.docker.com/_/node 
-FROM image-registry.openshift-image-registry.svc:5000/livedemo/single-container-app:86dcdaa
+FROM openshift/local-node
 
 # Create and change to the app directory.
 WORKDIR /usr/src/app
 
-# Copy local code to the container image.
-COPY . . 
+# Copy application dependency manifests to the container image.
+COPY package.json ./
+
 # Install production dependencies.
 RUN npm install --only=production
+
+# Copy local code to the container image.
+COPY . . 
 
 # Configure and document the service HTTP port.
 ENV PORT 8080
